@@ -22,6 +22,13 @@ Options:
 - D3
 - p5
 
+## Plotting
+Plotting the trips required a conversion from coordinates -> x,y pixels. I used the [mercator projection](https://en.wikipedia.org/wiki/Mercator_projection)
+![mercator](https://user-images.githubusercontent.com/21694364/54144406-0372f680-4402-11e9-8e5e-4f2c9d74b995.png)
+
+Converting speed to color also required a mapping conversion for each of the R,G,B.
+
+
 ## Roadblocks
 Using p5 caused for a small learning curve as well as a challenge when looking up documentation. Since p5 is fairly new and is based on the processing framework, there was lots to be added to the language. I resorted to using p5 for it's simple use of WEBGL. The biggest road block was lack of support from the language which caused for a lot of guess work by my part. 
 
