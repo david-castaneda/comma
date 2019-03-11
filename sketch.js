@@ -60,10 +60,10 @@ function mapSingleTrip() {
 function setup() {
   createCanvas(vw, vh, WEBGL);
 
-  camZoom = createSlider(-1, 5, 1);
+  camZoom = createSlider(1, 8, 1);
 
   dropdown = createSelect();
-  dropdown.option("All trips");
+  // dropdown.option("All trips");
   filenames.files.map(file => dropdown.option(file));
 
   // Load all trips
@@ -93,7 +93,7 @@ function setupCamera() {
 
 function setupPlane() {
   push();
-  fill(255, 90, 95);
+  fill(255, 255, 255);
   noStroke();
   translate(0, 200);
   rotateX(HALF_PI);
@@ -125,7 +125,7 @@ class Trip {
   plot() {
     translate(-vw / 1.5, 0, this.key);
 
-    this.coords.slice(0, 600).map(({ index, lng, lat, speed }) => {
+    this.coords.map(({ index, lng, lat, speed }) => {
       if (this.coords[parseInt(index) - 1]) {
         let point = new Point(
           index,
@@ -135,7 +135,8 @@ class Trip {
           this.coords[parseInt(index) - 1].index,
           this.coords[parseInt(index) - 1].lng,
           this.coords[parseInt(index) - 1].lat,
-          this.coords[parseInt(index) - 1].speed
+          this.coords[parseInt(index) - 1].speed,
+          this.key
         );
 
         point.show();
@@ -153,7 +154,8 @@ class Point {
     prev_index,
     prev_lng,
     prev_lat,
-    prev_speed
+    prev_speed,
+    key
   ) {
     this.x = this.getX(current_lng);
     this.y = this.getY(current_lat);
@@ -168,6 +170,7 @@ class Point {
     this.prev_speed = prev_speed;
 
     this.color = this.getColor();
+    this.key = key;
   }
 
   // Get Y
@@ -201,11 +204,24 @@ class Point {
 
   show() {
     fill(this.color);
-
     stroke(this.color);
 
-    translate(2, 0, 0);
+    // if (parseInt(this.index) > parseInt(vw) / 4.5) {
+    // if (parseInt(this.index) > parseInt(vw) / 2) {
+    // translate(5, 0, 0);
+    // circle(vw - this.index, this.speed + 100, 2);
+    // rect(-vw - 200, 50, 1, this.speed);
+    // } else {
+    // translate(5, 0, 0);
+    // circle(vw - this.index, this.speed + 100, 2);
+    // rect(-vw - 200, 50, 1, this.speed);
+    // }
+    // } else {
+    // translate(5, 0, 0);
+    // rect(this.index, 0, 1, this.speed);
 
-    rect(this.index, 0, 1, this.speed);
+    // translate(5, 0, 0);
+    circle(this.index, this.speed * (this.key + 1), 2);
+    // }
   }
 }
