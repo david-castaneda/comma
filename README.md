@@ -37,6 +37,13 @@ Displaying all the data simultaneously caused the rendering to be unbearable, i 
 All trips trying to be displayed at once.
 <img width="947" alt="Screen Shot 2019-03-11 at 12 28 57 PM" src="https://user-images.githubusercontent.com/21694364/54140868-f0a8f380-43fa-11e9-83d5-5b289f182a9c.png">
 
+Dealing with p5's immaturity also set me back in term of using some its features. 
+For example, i wasnt able to use the line tools to plot the point based on coordinates due to the incompatibility between WEBGL and [vertex() with texture()](https://github.com/processing/p5.js/issues/3498). This issue was addressed in the p5 community, a release for a fix is issued for March 31st, 2019.
+
+![53847923_2230911583835511_4479859530649305088_n](https://user-images.githubusercontent.com/21694364/54144746-bf342600-4402-11e9-8720-0c3bb411560f.png)
+
+![53561718_388618065024819_4369578398419255296_n](https://user-images.githubusercontent.com/21694364/54144865-04585800-4403-11e9-94d0-881a1b837071.png)
+
 
 ## Outcome
 I wasn't able to complete all the things i wanted to do, i mainly got some visual representation of the trip speed in a very rudimentary way.
