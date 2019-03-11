@@ -42,3 +42,11 @@ I wasn't able to complete all the things i wanted to do, i mainly got some visua
 - p5 is still very new and needs a lot of documentation as well as developer evangelists.
 
 - Working with "3d" space on a 2d canvas was interesting. 
+
+## Other representations
+
+- Based on these representations i thought it would be cool to play around with implementing sound with the patterns that the represenations create.
+
+<img width="1457" alt="Screen Shot 2019-03-11 at 12 55 33 PM" src="https://user-images.githubusercontent.com/21694364/54141992-1f27ce00-43fd-11e9-8da3-609f1e45a67d.png">
+
+<img width="944" alt="Screen Shot 2019-03-11 at 12 54 44 PM" src="https://user-images.githubusercontent.com/21694364/54142012-2b139000-43fd-11e9-8882-c229c05f4f77.png">
